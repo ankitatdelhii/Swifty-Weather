@@ -21,6 +21,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     let weatherURL = "http://api.openweathermap.org/data/2.5/weather"
     
     let locationManager = CLLocationManager()
+    let model = weatherData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,8 +70,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     
     func parseJSON(with weatherJSON: JSON){
-        cityLabel.text = weatherJSON["name"].stringValue
-        tempLabel.text = "\(weatherJSON["main"]["temp"].doubleValue - 273.5)"
+        model.city = weatherJSON["name"].stringValue
+        model.temperature = Int(weatherJSON["main"]["temp"].doubleValue - 273.5)
+        model.condition = weatherJSON["weather"][0]["id"].intValue
+        model.weatherIconName = model.getWeatherIcon(condition: model.condition)
+        updateUI()
+    }
+    
+    func updateUI(){
+        cityLabel.text = model.city
+        tempLabel.text = "\(model.temperature) °C"
+        weatherIcon.image = UIImage(named: model.weatherIconName)
     }
 
 

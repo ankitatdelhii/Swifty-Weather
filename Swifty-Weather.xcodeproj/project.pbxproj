@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		48FBC53FD7393C82F3216CD4 /* Pods_Swifty_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E54FFDF1818E8CAAD06611B /* Pods_Swifty_Weather.framework */; };
 		9DB7F5FE221607C80031B0AE /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9DB7F5FD221607C80031B0AE /* .gitignore */; };
+		9DB7F60022160ABA0031B0AE /* weatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7F5FF22160ABA0031B0AE /* weatherData.swift */; };
 		9DBAA3B02214C58900596344 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBAA3AF2214C58900596344 /* AppDelegate.swift */; };
 		9DBAA3B22214C58900596344 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBAA3B12214C58900596344 /* ViewController.swift */; };
 		9DBAA3B52214C58900596344 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DBAA3B32214C58900596344 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 		66E1083AA2DD289E82085964 /* Pods-Swifty-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swifty-Weather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swifty-Weather/Pods-Swifty-Weather.debug.xcconfig"; sourceTree = "<group>"; };
 		6E54FFDF1818E8CAAD06611B /* Pods_Swifty_Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swifty_Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DB7F5FD221607C80031B0AE /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		9DB7F5FF22160ABA0031B0AE /* weatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherData.swift; sourceTree = "<group>"; };
 		9DBAA3AC2214C58900596344 /* Swifty-Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swifty-Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DBAA3AF2214C58900596344 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DBAA3B12214C58900596344 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +52,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9DB7F60122160AC20031B0AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9DB7F5FF22160ABA0031B0AE /* weatherData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9DB7F60222160ACE0031B0AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9DBAA3B32214C58900596344 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9DB7F60322160AD70031B0AE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9DBAA3B12214C58900596344 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		9DBAA3A32214C58900596344 = {
 			isa = PBXGroup;
 			children = (
@@ -71,9 +97,10 @@
 		9DBAA3AE2214C58900596344 /* Swifty-Weather */ = {
 			isa = PBXGroup;
 			children = (
+				9DB7F60322160AD70031B0AE /* Controller */,
+				9DB7F60222160ACE0031B0AE /* View */,
+				9DB7F60122160AC20031B0AE /* Model */,
 				9DBAA3AF2214C58900596344 /* AppDelegate.swift */,
-				9DBAA3B12214C58900596344 /* ViewController.swift */,
-				9DBAA3B32214C58900596344 /* Main.storyboard */,
 				9DBAA3B62214C58D00596344 /* Assets.xcassets */,
 				9DBAA3B82214C58D00596344 /* LaunchScreen.storyboard */,
 				9DBAA3BB2214C58D00596344 /* Info.plist */,
@@ -216,6 +243,7 @@
 			files = (
 				9DBAA3B22214C58900596344 /* ViewController.swift in Sources */,
 				9DBAA3B02214C58900596344 /* AppDelegate.swift in Sources */,
+				9DB7F60022160ABA0031B0AE /* weatherData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

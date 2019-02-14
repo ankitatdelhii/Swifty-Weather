@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Front View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swifty_Weather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Front View" customClass="ViewController" customModule="Swifty_Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,19 +24,19 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JgP-m4-aj5" userLabel="Container View">
                                 <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jSp-W2-Blz" userLabel="Weather Icon">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jSp-W2-Blz" userLabel="Weather Icon">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="273.5"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1k-9Z-26Z" userLabel="City label">
-                                        <rect key="frame" x="0.0" y="437.5" width="375" height="109.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="10" y="437.5" width="365" height="109.5"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="36"/>
+                                        <color key="textColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GqC-Li-o0H" userLabel="Temperature">
                                         <rect key="frame" x="0.0" y="273.5" width="375" height="164"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="46"/>
+                                        <color key="textColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -55,16 +55,29 @@
                                     <constraint firstAttribute="bottom" secondItem="g1k-9Z-26Z" secondAttribute="bottom" id="svS-gj-DoM"/>
                                     <constraint firstItem="g1k-9Z-26Z" firstAttribute="height" secondItem="JgP-m4-aj5" secondAttribute="height" multiplier="0.2" id="v6h-gS-s5Q"/>
                                     <constraint firstItem="jSp-W2-Blz" firstAttribute="leading" secondItem="JgP-m4-aj5" secondAttribute="leading" id="vvh-Oe-RP3"/>
-                                    <constraint firstItem="g1k-9Z-26Z" firstAttribute="leading" secondItem="JgP-m4-aj5" secondAttribute="leading" id="xCN-Gb-mRg"/>
+                                    <constraint firstItem="g1k-9Z-26Z" firstAttribute="leading" secondItem="JgP-m4-aj5" secondAttribute="leading" constant="10" id="xCN-Gb-mRg"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miC-nt-mxk">
+                                <rect key="frame" x="287.5" y="20" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="5Zd-Y1-K5l"/>
+                                    <constraint firstAttribute="height" constant="80" id="wcb-pD-rvk"/>
+                                </constraints>
+                                <state key="normal" image="switch"/>
+                                <connections>
+                                    <segue destination="orx-rz-ySC" kind="show" identifier="goToCity" id="A0t-ul-cmK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0c0-QP-Bwz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1jz-Dj-LCF"/>
                             <constraint firstAttribute="bottom" secondItem="0c0-QP-Bwz" secondAttribute="bottom" id="HD0-Cm-2gs"/>
+                            <constraint firstItem="miC-nt-mxk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="HcU-cU-Xlh"/>
                             <constraint firstAttribute="trailing" secondItem="JgP-m4-aj5" secondAttribute="trailing" id="KkN-Lj-wcc"/>
                             <constraint firstItem="JgP-m4-aj5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NZN-7f-Lzw"/>
+                            <constraint firstItem="miC-nt-mxk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="140" id="SZR-du-ncK"/>
                             <constraint firstItem="0c0-QP-Bwz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="WX4-fa-rLZ"/>
                             <constraint firstAttribute="trailing" secondItem="0c0-QP-Bwz" secondAttribute="trailing" id="cSy-yP-ea9"/>
                             <constraint firstAttribute="bottom" secondItem="JgP-m4-aj5" secondAttribute="bottom" id="jaB-ZA-54Q"/>
@@ -82,8 +95,36 @@
             </objects>
             <point key="canvasLocation" x="141.59999999999999" y="133.5832083958021"/>
         </scene>
+        <!--City Mode-->
+        <scene sceneID="Yln-kt-qsf">
+            <objects>
+                <viewController id="orx-rz-ySC" userLabel="City Mode" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4C3-MT-70M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background2" translatesAutoresizingMaskIntoConstraints="NO" id="OSz-gE-7qv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OSz-gE-7qv" secondAttribute="trailing" id="Cmy-Wi-O5a"/>
+                            <constraint firstAttribute="bottom" secondItem="OSz-gE-7qv" secondAttribute="bottom" id="c7S-Ni-Avy"/>
+                            <constraint firstItem="OSz-gE-7qv" firstAttribute="leading" secondItem="4C3-MT-70M" secondAttribute="leading" id="e22-wS-nzL"/>
+                            <constraint firstItem="OSz-gE-7qv" firstAttribute="top" secondItem="4C3-MT-70M" secondAttribute="top" id="jzo-FN-5z3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="swh-Lh-Jzz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VyG-1s-qpq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="943" y="140"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Background1" width="1080" height="720"/>
+        <image name="Background2" width="960" height="640.08001708984375"/>
+        <image name="switch" width="64" height="64"/>
     </resources>
 </document>
