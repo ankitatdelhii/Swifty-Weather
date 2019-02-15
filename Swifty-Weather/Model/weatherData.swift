@@ -13,6 +13,8 @@ class weatherData {
     var condition = 0
     var city = ""
     var weatherIconName = ""
+    var maxTemp = 0
+    var minTemp = 0
     
     func getWeatherIcon(condition : Int) -> String{
         switch (condition) {

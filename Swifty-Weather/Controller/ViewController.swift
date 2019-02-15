@@ -16,6 +16,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, cityNamePr {
     @IBOutlet weak var weatherIcon: UIImageView!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var maxTemp: UILabel!
+    @IBOutlet weak var minTemp: UILabel!
     
     let App_Id = "2de1c2aa184891025ed93b3ce52335da"
     let weatherURL = "http://api.openweathermap.org/data/2.5/weather"
@@ -77,6 +79,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, cityNamePr {
         if let city = weatherJSON["name"].string{
             model.city = city
             model.temperature = Int(weatherJSON["main"]["temp"].doubleValue - 273.5)
+            model.maxTemp = Int(weatherJSON["main"]["temp_max"].doubleValue - 273.5)
+            model.minTemp = Int(weatherJSON["main"]["temp_min"].doubleValue - 273.5)
             model.condition = weatherJSON["weather"][0]["id"].intValue
             model.weatherIconName = model.getWeatherIcon(condition: model.condition)
             updateUI()
@@ -91,6 +95,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, cityNamePr {
         cityLabel.text = model.city
         tempLabel.text = "\(model.temperature) °C"
         weatherIcon.image = UIImage(named: model.weatherIconName)
+        maxTemp.text = "Max : \(model.maxTemp) °C"
+        minTemp.text = "Min : \(model.minTemp) °C"
     }
     
     //MARK:- Code for changeCity

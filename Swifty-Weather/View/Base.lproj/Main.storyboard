@@ -34,8 +34,20 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GqC-Li-o0H" userLabel="Temperature">
-                                        <rect key="frame" x="0.0" y="273.5" width="375" height="164"/>
+                                        <rect key="frame" x="0.0" y="273.5" width="187.5" height="164"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="46"/>
+                                        <color key="textColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovf-th-dwz" userLabel="Max">
+                                        <rect key="frame" x="187.5" y="273.5" width="187.5" height="82"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="32"/>
+                                        <color key="textColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFq-iz-RN0" userLabel="Min">
+                                        <rect key="frame" x="187.5" y="355.5" width="187.5" height="82"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="32"/>
                                         <color key="textColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -44,26 +56,29 @@
                                     <constraint firstItem="GqC-Li-o0H" firstAttribute="height" secondItem="JgP-m4-aj5" secondAttribute="height" multiplier="0.3" id="0os-ll-LiU"/>
                                     <constraint firstItem="jSp-W2-Blz" firstAttribute="top" secondItem="JgP-m4-aj5" secondAttribute="top" id="2TN-Tj-IMC"/>
                                     <constraint firstItem="jSp-W2-Blz" firstAttribute="height" secondItem="JgP-m4-aj5" secondAttribute="height" multiplier="0.5" id="8S8-mu-sJs"/>
+                                    <constraint firstItem="zFq-iz-RN0" firstAttribute="top" secondItem="ovf-th-dwz" secondAttribute="bottom" id="Eh5-I6-Wlq"/>
                                     <constraint firstItem="GqC-Li-o0H" firstAttribute="top" secondItem="jSp-W2-Blz" secondAttribute="bottom" id="GhT-GL-cMt"/>
-                                    <constraint firstItem="GqC-Li-o0H" firstAttribute="top" secondItem="jSp-W2-Blz" secondAttribute="bottom" id="HbS-zl-MvP"/>
+                                    <constraint firstItem="zFq-iz-RN0" firstAttribute="top" secondItem="ovf-th-dwz" secondAttribute="bottom" id="HZt-9M-Bcv"/>
+                                    <constraint firstItem="GqC-Li-o0H" firstAttribute="width" secondItem="jSp-W2-Blz" secondAttribute="width" multiplier="0.5" id="JDI-5E-FVH"/>
+                                    <constraint firstItem="ovf-th-dwz" firstAttribute="top" secondItem="jSp-W2-Blz" secondAttribute="bottom" id="JiL-iA-C4e"/>
+                                    <constraint firstItem="zFq-iz-RN0" firstAttribute="leading" secondItem="GqC-Li-o0H" secondAttribute="trailing" id="Kht-rL-CrQ"/>
+                                    <constraint firstItem="g1k-9Z-26Z" firstAttribute="top" secondItem="zFq-iz-RN0" secondAttribute="bottom" id="Npn-QN-mx3"/>
                                     <constraint firstAttribute="trailing" secondItem="g1k-9Z-26Z" secondAttribute="trailing" id="Oga-m5-CzG"/>
                                     <constraint firstItem="GqC-Li-o0H" firstAttribute="leading" secondItem="JgP-m4-aj5" secondAttribute="leading" id="SNe-5q-R0o"/>
-                                    <constraint firstItem="g1k-9Z-26Z" firstAttribute="top" secondItem="GqC-Li-o0H" secondAttribute="bottom" id="csM-Yo-aEq"/>
-                                    <constraint firstAttribute="trailing" secondItem="GqC-Li-o0H" secondAttribute="trailing" id="gc8-1N-3UW"/>
+                                    <constraint firstItem="ovf-th-dwz" firstAttribute="leading" secondItem="GqC-Li-o0H" secondAttribute="trailing" id="WR3-pX-URT"/>
+                                    <constraint firstAttribute="trailing" secondItem="ovf-th-dwz" secondAttribute="trailing" id="eh7-y9-8ww"/>
                                     <constraint firstAttribute="trailing" secondItem="jSp-W2-Blz" secondAttribute="trailing" id="heV-VR-4Mv"/>
                                     <constraint firstItem="g1k-9Z-26Z" firstAttribute="top" secondItem="GqC-Li-o0H" secondAttribute="bottom" id="m3E-is-cpb"/>
+                                    <constraint firstAttribute="trailing" secondItem="zFq-iz-RN0" secondAttribute="trailing" id="mPm-cd-r7j"/>
                                     <constraint firstAttribute="bottom" secondItem="g1k-9Z-26Z" secondAttribute="bottom" id="svS-gj-DoM"/>
+                                    <constraint firstItem="ovf-th-dwz" firstAttribute="height" secondItem="GqC-Li-o0H" secondAttribute="height" multiplier="0.5" id="unv-EZ-fhY"/>
                                     <constraint firstItem="g1k-9Z-26Z" firstAttribute="height" secondItem="JgP-m4-aj5" secondAttribute="height" multiplier="0.2" id="v6h-gS-s5Q"/>
                                     <constraint firstItem="jSp-W2-Blz" firstAttribute="leading" secondItem="JgP-m4-aj5" secondAttribute="leading" id="vvh-Oe-RP3"/>
                                     <constraint firstItem="g1k-9Z-26Z" firstAttribute="leading" secondItem="JgP-m4-aj5" secondAttribute="leading" constant="10" id="xCN-Gb-mRg"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miC-nt-mxk">
-                                <rect key="frame" x="287.5" y="20" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="5Zd-Y1-K5l"/>
-                                    <constraint firstAttribute="height" constant="80" id="wcb-pD-rvk"/>
-                                </constraints>
+                                <rect key="frame" x="266.5" y="20" width="93.5" height="80"/>
                                 <state key="normal" image="switch"/>
                                 <connections>
                                     <segue destination="orx-rz-ySC" kind="show" identifier="goToCity" id="A0t-ul-cmK"/>
@@ -73,12 +88,14 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0c0-QP-Bwz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1jz-Dj-LCF"/>
+                            <constraint firstItem="miC-nt-mxk" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.25" id="9EK-07-yXN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="miC-nt-mxk" secondAttribute="trailing" constant="15" id="B48-xs-TPW"/>
+                            <constraint firstItem="miC-nt-mxk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FeY-OK-qmm"/>
                             <constraint firstAttribute="bottom" secondItem="0c0-QP-Bwz" secondAttribute="bottom" id="HD0-Cm-2gs"/>
-                            <constraint firstItem="miC-nt-mxk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="HcU-cU-Xlh"/>
                             <constraint firstAttribute="trailing" secondItem="JgP-m4-aj5" secondAttribute="trailing" id="KkN-Lj-wcc"/>
                             <constraint firstItem="JgP-m4-aj5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NZN-7f-Lzw"/>
-                            <constraint firstItem="miC-nt-mxk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="140" id="SZR-du-ncK"/>
                             <constraint firstItem="0c0-QP-Bwz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="WX4-fa-rLZ"/>
+                            <constraint firstItem="miC-nt-mxk" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.12" id="c9p-PJ-CWs"/>
                             <constraint firstAttribute="trailing" secondItem="0c0-QP-Bwz" secondAttribute="trailing" id="cSy-yP-ea9"/>
                             <constraint firstAttribute="bottom" secondItem="JgP-m4-aj5" secondAttribute="bottom" id="jaB-ZA-54Q"/>
                             <constraint firstItem="JgP-m4-aj5" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.82" id="spj-bj-H48"/>
@@ -87,6 +104,8 @@
                     </view>
                     <connections>
                         <outlet property="cityLabel" destination="g1k-9Z-26Z" id="aus-Dn-mCf"/>
+                        <outlet property="maxTemp" destination="ovf-th-dwz" id="kIi-zp-UJa"/>
+                        <outlet property="minTemp" destination="zFq-iz-RN0" id="Yth-PF-z2L"/>
                         <outlet property="tempLabel" destination="GqC-Li-o0H" id="1Az-hS-Ry9"/>
                         <outlet property="weatherIcon" destination="jSp-W2-Blz" id="8ae-RN-dBu"/>
                     </connections>
