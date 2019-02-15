@@ -58,7 +58,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, cityNamePr {
         Alamofire.request(weatherURL, method: .get, parameters: param).responseJSON { (response) in
             if response.result.isSuccess{
                 print("We got the data")
-                let json = JSON(response.result.value!)
+                guard let res = response.result.value else{
+                    fatalError("Error Unwrapping result file!")
+                }
+                let json = JSON(res)
                 self.parseJSON(with: json)
             }
             else{
@@ -70,11 +73,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate, cityNamePr {
     
     
     func parseJSON(with weatherJSON: JSON){
-        model.city = weatherJSON["name"].stringValue
-        model.temperature = Int(weatherJSON["main"]["temp"].doubleValue - 273.5)
-        model.condition = weatherJSON["weather"][0]["id"].intValue
-        model.weatherIconName = model.getWeatherIcon(condition: model.condition)
-        updateUI()
+        if let city = weatherJSON["name"].string{
+            model.city = city
+            model.temperature = Int(weatherJSON["main"]["temp"].doubleValue - 273.5)
+            model.condition = weatherJSON["weather"][0]["id"].intValue
+            model.weatherIconName = model.getWeatherIcon(condition: model.condition)
+            updateUI()
+        }
+        else{
+            cityLabel.text = "JSON Error"
+        }
+        
     }
     
     func updateUI(){

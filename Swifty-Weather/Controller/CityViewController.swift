@@ -25,7 +25,11 @@ class CityViewController: UIViewController {
     
     @IBAction func getWeatherPressed(_ sender: UIButton) {
         cityName = cityTextField.text!
-        delegate?.changeCityName(name: cityName!)
+        guard let cName = cityName else{
+            fatalError("Nil city Name")
+        }
+        delegate?.changeCityName(name: cName)
+        
         self.dismiss(animated: true, completion: nil)
     }
 
