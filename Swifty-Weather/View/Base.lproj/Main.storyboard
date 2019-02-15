@@ -98,7 +98,7 @@
         <!--City Mode-->
         <scene sceneID="Yln-kt-qsf">
             <objects>
-                <viewController id="orx-rz-ySC" userLabel="City Mode" sceneMemberID="viewController">
+                <viewController id="orx-rz-ySC" userLabel="City Mode" customClass="CityViewController" customModule="Swifty_Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4C3-MT-70M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,6 +136,9 @@
                                 <state key="normal" title="Get Weather">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="getWeatherPressed:" destination="orx-rz-ySC" eventType="touchUpInside" id="Lcx-Va-jmS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -153,6 +156,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="swh-Lh-Jzz"/>
                     </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="2tp-tT-z7Z" id="R1I-TN-pbM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VyG-1s-qpq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

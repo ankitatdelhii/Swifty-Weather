@@ -11,7 +11,7 @@ import CoreLocation
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, cityNamePr {
 
     @IBOutlet weak var weatherIcon: UIImageView!
     @IBOutlet weak var cityLabel: UILabel!
@@ -82,7 +82,20 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         tempLabel.text = "\(model.temperature) °C"
         weatherIcon.image = UIImage(named: model.weatherIconName)
     }
+    
+    //MARK:- Code for changeCity
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToCity"{
+            let destinationVC = segue.destination as! CityViewController
+            destinationVC.delegate = self
+        }
+    }
 
+    func changeCityName(name: String) {
+        let cityParam : [String : String] = ["q" : name, "appid" : App_Id]
+        getWeatherData(with: cityParam)
+    }
 
 }
 
