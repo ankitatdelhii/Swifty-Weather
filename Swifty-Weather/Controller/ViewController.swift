@@ -59,7 +59,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, cityNamePr {
     func getWeatherData(with param : [String : String]){
         Alamofire.request(weatherURL, method: .get, parameters: param).responseJSON { (response) in
             if response.result.isSuccess{
-                print("We got the data")
                 guard let res = response.result.value else{
                     fatalError("Error Unwrapping result file!")
                 }
@@ -75,7 +74,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, cityNamePr {
     
     
     func parseJSON(with weatherJSON: JSON){
-        print(weatherJSON)
         if let city = weatherJSON["name"].string{
             model.city = city
             model.temperature = Int(weatherJSON["main"]["temp"].doubleValue - 273.5)
