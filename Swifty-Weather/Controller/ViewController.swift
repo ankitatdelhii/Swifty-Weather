@@ -73,6 +73,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, cityNamePr {
     
     
     func parseJSON(with weatherJSON: JSON){
+        print(weatherJSON)
         if let city = weatherJSON["name"].string{
             model.city = city
             model.temperature = Int(weatherJSON["main"]["temp"].doubleValue - 273.5)
